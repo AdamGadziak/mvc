@@ -1,5 +1,5 @@
-UAM.FooterView = function () {
-	UAM.BasicView.call(this);
+UAM.footerView = function () {
+	UAM.basicView.call(this);
 };
 
-UAM.utils.inherits(UAM.BasicView, UAM.FooterView);
+UAM.utils.inherits(UAM.basicView, UAM.footerView);

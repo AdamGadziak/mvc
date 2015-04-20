@@ -1,5 +1,8 @@
-UAM.ListView = function () {
-	UAM.BasicView.call(this);
+UAM.listView = function () {
+	UAM.basicView.call(this);
+	
+	this.ListItems = [];
+
 };
 
-UAM.utils.inherits(UAM.BasicView, UAM.ListView);
+UAM.utils.inherits(UAM.basicView, UAM.listView);
