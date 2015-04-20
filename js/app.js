@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	var footerView = new UAM.footerView(document.querySelector('#footerView'));
 	
 
-	var inputCtrl = new inputCtrl(inputView, store);
+	var inputCtrl = new UAM.inputCtrl(inputView, store);
 	var listCtrl = new UAM.listCtrl(listView, store);
 	var footerCtrl = new UAM.footerCtrl(footerView, store);
 });
