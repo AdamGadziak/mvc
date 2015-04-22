@@ -1,5 +1,5 @@
 UAM.inputView = function(){
-	UAM.EventEmitter.call(this);
+	UAM.basicView.call(this);
 	this.addButton = document.querySelector('button');
 	this.input = document.querySelector('input');
 	this.add = function(){	
@@ -10,7 +10,7 @@ UAM.inputView = function(){
 	}
 	this.addButton.addEventListener('click',this.add.bind(this))
 }
-UAM.utils.inherits(UAM.EventEmitter, UAM.inputView);
+UAM.utils.inherits(UAM.basicView, UAM.inputView);
 
 
 

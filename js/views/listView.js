@@ -1,5 +1,5 @@
 UAM.listView = function(content){
-	UAM.EventEmitter.call(this);
+	UAM.basicView.call(this);
 	this.ListElements = [];
 	mainList = content;
 	this.addItem = function(text, status){
@@ -14,6 +14,17 @@ UAM.listView = function(content){
 			this.emit("listItemClicked", text);
 		}
 		li.addEventListener('click', adding.bind(this));
+
+	this.changeStatus = function(text, status){
+		element = this.ListElements[text];
+		if (status){
+			element.setAttribute('class', "list-group-item active");
+		}
+		else{
+			element.setAttribute('class', "");
+		}
+		
+	}
 	}
 }
-UAM.utils.inherits(UAM.EventEmitter, UAM.listView);
+UAM.utils.inherits(UAM.basicView, UAM.listView);
