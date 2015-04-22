@@ -5,4 +5,7 @@ UAM.listCtrl = function(listView, store){
 	store.on('addedTask',function(text, status, len){
 		listView.addItem(text, status);
 	})
+	store.on("changedStatus", function(text, status, active){
+		listView.changeStatus(text, status);
+	})
 }
