@@ -21,7 +21,7 @@ UAM.listView = function(content){
 			element.setAttribute('class', "list-group-item active");
 		}
 		else{
-			element.setAttribute('class', "");
+			element.setAttribute('class', "list-group-item");
 		}
 		
 	}
