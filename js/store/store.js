@@ -24,3 +24,17 @@ UAM.Store.prototype.add = function (el_text, el_status) {
 	this.toDoList.push(newTask);
 	this.emit("addedTask", newTask.text, newTask.status, this.toDoList.length);
 };
+UAM.Store.prototype.changeStatus = function (el_text) {
+	for (i in this.toDoList){
+		if (this.toDoList[i].text == el_text){
+			this.toDoList[i].status = !this.toDoList[i].status;
+			if (this.toDoList[i].status){
+				this.active++;
+			}
+			else{
+				this.active--;
+			}
+			this.emit("changedStatus", this.toDoList[i].text, this.toDoList[i].status, this.active);
+		}
+	}
+};
